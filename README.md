@@ -46,6 +46,8 @@ Integrating Remita Inline Checkout is as easy as including our JavaScript librar
 </script>
 
 ```
+## Documentation
+[Remita Documentation](https://remita.net/developers/)
 
 ## Release History
 
