@@ -57,3 +57,11 @@ Integrating Remita Inline Checkout is as easy as including our JavaScript librar
     * The first proper release
 * 0.0.1
     * Work in progress
+
+
+## Useful links
+* Join our Slack Developer/Support channel at http://bit.ly/RemitaDevSlack
+    
+## Support
+- For all other support needs, support@remita.net
+- To contribute to this repo, create an issue on what you intend to fix or update, make a PR and team will look into it and merge.
