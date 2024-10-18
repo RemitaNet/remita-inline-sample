@@ -142,27 +142,28 @@
     }
 
     function makePayment() {
-        var form = document.querySelector("#payment-form");
-        var paymentEngine = RmPaymentEngine.init({
-            key: 'REVNT05UR0lGVHw0MDgyNTIxNHwxZTI1NGNlNTVhMzkyYTgxYjYyNjQ2ZWIwNWU0YWE4ZTNjOTU0ZWFlODllZGEwMTUwMjYyMTk2ZmFmOGMzNWE5ZGVjYmU3Y2JkOGI5ZWI5YzFmZWMwYTI3MGI5MzA0N2FjZWEzZDhiZjUwNDY5YjVjOGY3M2NhYjQzMTg3NzI4Mg==',
-            customerId: form.querySelector('input[name="email"]').value,
-            firstName: form.querySelector('input[name="firstName"]').value,
-            lastName: form.querySelector('input[name="lastName"]').value,
-            email: form.querySelector('input[name="email"]').value,
-            amount: form.querySelector('input[name="amount"]').value,
-            narration: form.querySelector('input[name="narration"]').value,
-            onSuccess: function (response) {
-                console.log('callback Successful Response', response);
-            },
-            onError: function (response) {
-                console.log('callback Error Response', response);
-            },
-            onClose: function () {
-                console.log("closed");
-            }
-        });
-         paymentEngine.showPaymentWidget();
-    }
+              var form = document.querySelector("#payment-form");
+              var paymentEngine = RmPaymentEngine.init({
+                  key:'QzAwMDAyNzEyNTl8MTEwNjE4NjF8OWZjOWYwNmMyZDk3MDRhYWM3YThiOThlNTNjZTE3ZjYxOTY5NDdmZWE1YzU3NDc0ZjE2ZDZjNTg1YWYxNWY3NWM4ZjMzNzZhNjNhZWZlOWQwNmJhNTFkMjIxYTRiMjYzZDkzNGQ3NTUxNDIxYWNlOGY4ZWEyODY3ZjlhNGUwYTY=',
+                  transactionId: Math.floor(Math.random()*1101233), // Replace with a reference you generated or remove the entire field for us to auto-generate a reference for you. Note that you will be able to check the status of this transaction using this transaction Id
+                  customerId: '39832',
+                  firstName: 'John',
+                  lastName: 'Doe',
+                  email: 'john.doe@mailinator.com',
+                  amount: 15000,
+                  narration: 'Essential Walking Shoes',
+                  onSuccess: function (response) {
+                      console.log('callback Successful Response', response);
+                  },
+                  onError: function (response) {
+                      console.log('callback Error Response', response);
+                  },
+                  onClose: function () {
+                      console.log("closed");
+                  }
+              });
+               paymentEngine.showPaymentWidget();
+          }
 
     window.onload = function () {
         setDemoData();
