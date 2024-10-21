@@ -7,17 +7,19 @@
   </head>
   <body>
     <section>
-      <div class="product">
-        <div class="description">
-          <h3>Essential Walking Shoes</h3>
-          <h5>₦15000.00</h5>
-        </div><br/>
-        <img src="https://www.remita.net/developers/assets/images/logos/ecomm3.svg" alt="Essential Walking Shoes"/>
-      </div>
-      <div class="button-container">
-        <form onsubmit="makePayment()" id="payment-form">
-        <input type="button" onclick="makePayment()" value="Submit" class="button"/>
-      </form>
+      <div class="cart-container">
+        <h1>Essential Walking Shoes</h1>
+        <div class="cart-item">
+          <img src="https://www.remita.net/developers/assets/images/logos/ecomm3.svg" alt="Essential Walking Shoes"/>
+          <div class="item-details">
+            <h5 class="item-amount">₦15,000.00</p>
+          </div>
+        </div>
+        <div class="button-container">
+          <form onsubmit="makePayment()" id="payment-form">
+          <input type="button" onclick="makePayment()" value="Submit" class="button"/>
+        </form>
+        </div>
       </div>
     </section>
     <script>         
@@ -31,7 +33,7 @@
                   lastName: 'Doe',
                   email: 'john.doe@mailinator.com',
                   amount: 15000,
-                  narration: 'dasdsa',
+                  narration: 'Payment for Shoe',
                   onSuccess: function (response) {
                       console.log('callback Successful Response', response);
                   },
@@ -47,25 +49,58 @@
       </script>
       <style>
       body {
-        font-family: 'Inter', sans-serif;
-      }
-      
-      h3, h5 {
-        margin: 0;
-      }
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-      .product {
-        padding: 16px 16px;
-      }
+.cart-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+}
 
-      .button-container{
-        padding: 16px 16px;
-      }
-      
-      .product img {
-        max-width: 150px;
-        margin-right: 20px;
-      }
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+.item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+
+.item-name {
+  font-size: 18px;
+  margin: 0;
+}
+
+.item-amount {
+  color: #888;
+  font-size: 16px;
+}
+
+.checkout-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
       
       .button {
         background-color: #1CA78B;
