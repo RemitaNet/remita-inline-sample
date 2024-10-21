@@ -63,7 +63,7 @@ For detailed information, refer to [Remita Documentation](https://remita.net/dev
 ## Support
 - For all other support needs, support@remita.net
 
-###Contributing: To contribute to this repository, follow the steps below:
+### Contributing: To contribute to this repository, follow the steps below:
 
 - Fork the repository
 - Create a new branch: `git checkout -b feature-name`
